@@ -216,7 +216,7 @@ In this lab you'll work with Java containers:
 
 - find a package on Docker Hub which you can use to run a Java app
 - run a Java container and confirm which version of Java is installed using the `java -version` command
-- now find a *small* image for Java 8, with just the JRE runtime installed
+- now find a *small* image for Java 9, with just the JRE runtime installed
 
 > Stuck? Try [hints](hints.md) or check the [solution](solution.md).
 

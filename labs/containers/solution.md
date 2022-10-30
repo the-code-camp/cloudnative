@@ -5,26 +5,26 @@ Search for `java` on Docker Hub and the official image is the top hit.
 You might start by downloading the Java package:
 
 ```
-docker pull java
+docker pull java:9-jdk
 ```
 
 Run a container to check the Java version:
 
 ```
-docker run java java -version
+docker run java:9-jdk java -version
 ```
 
-And then the JRE build for Alpine is the smallest:
+And then the JRE build for Slim is the smallest:
 
 ```
-docker pull java:8-jre-alpine
+docker pull java:9-jre-slim
 ```
 
 ```
 docker image ls java
 ```
 
-> Latest is 640MB; 8 JRE is 100MB *but* both 4 years old...
+> 9-jdk is around 600MB; 9 JRE is 286MB *but* both are more than 4 years old...
 
 ## Using OpenJDK
 
@@ -34,7 +34,7 @@ But the `java` package is not the same as `openjdk` - and you should use `openjd
 
 ```
 docker pull openjdk
-docker pull openjdk:8-jre-alpine
+docker pull openjdk:9-jre-slim
 ```
 
 The default image tag is much more recent, and both images are smaller:
