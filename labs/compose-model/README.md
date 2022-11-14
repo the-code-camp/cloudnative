@@ -18,7 +18,7 @@ Compose models can be split across multiple files, which makes it easy to run th
 It's the same Docker Compose CLI:
 
 ```
-docker-compose --help
+docker compose --help
 ```
 
 > The help text isn't super clear, but you can use the `-f` flag multiple times to build a model from several YAML files.
@@ -40,12 +40,12 @@ Application configuration is applied to containers with environment variables an
 
 ```
 # deploy v1
-docker-compose -f labs/compose-model/rng/v1.yml up -d
+docker compose -f labs/compose-model/rng/v1.yml up -d
 
 # try the app at http://localhost:8090
 
 # deploy v2
-docker-compose -f labs/compose-model/rng/v2.yml up -d
+docker compose -f labs/compose-model/rng/v2.yml up -d
 ```
 
 </details><br/>
@@ -75,7 +75,7 @@ Compose lets you model volume mounts, so you can load local files into the conta
 
 ```
 # deploy v3
-docker-compose -f labs/compose-model/rng/v3.yml up -d
+docker compose -f labs/compose-model/rng/v3.yml up -d
 
 docker inspect rng_rng-web_1
 ```
@@ -99,7 +99,7 @@ You can specify a custom project name, and deploy the same model definition agai
 
 ```
 # use the -p flag to set a project name:
-docker-compose  -p rng-dev -f labs/compose-model/rng/v3.yml up -d
+docker compose  -p rng-dev -f labs/compose-model/rng/v3.yml up -d
 
 # this will fail because ports cannot be used more than once
 ```
@@ -124,7 +124,7 @@ This is where [override files](https://docs.docker.com/compose/extends/#multiple
 ```
 # use -p to set a custom project name, and join files starting
 # with the core spec and then adding the dev override:
-docker-compose -p rng-dev -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/dev.yml up -d
+docker compose -p rng-dev -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/dev.yml up -d
 ```
 
 </details><br/>
@@ -140,11 +140,11 @@ Try the dev app at http://localhost:8190, you'll see random numbers in the range
 
 ```
 # the project name isn't enough for Compose to find the container:
-docker-compose -p rng-dev logs rng-api
+docker compose -p rng-dev logs rng-api
 
 # you need to include the project name and all the override
 # files in any Compose commands:
-docker-compose -p rng-dev -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/dev.yml logs rng-api
+docker compose -p rng-dev -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/dev.yml logs rng-api
 ```
 
 </details><br/>
@@ -160,12 +160,12 @@ You now have two versions of the app running. Containers use very little compute
 
 ```
 # make sure to use a new project name and the correct files:
-docker-compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/test.yml up -d
+docker compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/test.yml up -d
 
 # try the app at http://localhost:8290
 
 # print the API logs:
-docker-compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/test.yml logs rng-api
+docker compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/test.yml logs rng-api
 ```
 
 </details><br/>

@@ -9,7 +9,7 @@ Copy it to the main folder so the config paths are correct, and the app will wor
 ```
 cp troubleshooting/docker/lab/solution.yml troubleshooting/docker/
 
-docker-compose -f troubleshooting/docker/solution.yml up -d
+docker compose -f troubleshooting/docker/solution.yml up -d
 ```
 
 > Use the app at http://localhost:8090

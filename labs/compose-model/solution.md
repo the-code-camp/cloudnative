@@ -24,7 +24,7 @@ cp ./lab/compose.yml ./rng/lab.yml
 Start the app:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 > Try it out at http://localhost:8390

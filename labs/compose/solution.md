@@ -12,7 +12,7 @@ Copy the Compose file and deploy the update:
 ```
 cp ./labs/compose/lab/compose.yml ./labs/compose/rng/lab.yml
 
-docker-compose -f ./labs/compose/rng/lab.yml up -d
+docker compose -f ./labs/compose/rng/lab.yml up -d
 ```
 
 > You'll see the new network and container created, but the RNG web and API containers will be left unchanged. The spec hasn't changed for those services, so the containers match the desired state.

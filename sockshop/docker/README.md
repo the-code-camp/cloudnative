@@ -28,10 +28,10 @@ There are lots of container images so it will be useful to pull them all before 
 
 ```
 # pulls all the images in the model:
-docker-compose -f ./sockshop/docker/docker-compose.yml pull
+docker compose -f ./sockshop/docker/docker-compose.yml pull
 
 # starts all containers in detached mode:
-docker-compose -f ./sockshop/docker/docker-compose.yml up -d
+docker compose -f ./sockshop/docker/docker-compose.yml up -d
 ```
 
 </details><br />
@@ -45,7 +45,7 @@ docker-compose -f ./sockshop/docker/docker-compose.yml up -d
 
 ```
 # this will show container status and published ports:
-docker-compose -f ./sockshop/docker/docker-compose.yml ps
+docker compose -f ./sockshop/docker/docker-compose.yml ps
 ```
 
 </details><br />
@@ -94,7 +94,7 @@ You can use the Compose command line to check container logs, and map out the wo
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f ./sockshop/docker/docker-compose.yml logs front-end
+docker compose -f ./sockshop/docker/docker-compose.yml logs front-end
 ```
 
 </details>
@@ -111,7 +111,7 @@ Scale up the front-end service up to three containers. Check the app - are you s
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f ./sockshop/docker/docker-compose.yml up -d --scale front-end=3
+docker compose -f ./sockshop/docker/docker-compose.yml up -d --scale front-end=3
 
 docker rm -f docker_front-end_1
 ```
@@ -128,7 +128,7 @@ docker rm -f docker_front-end_1
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f ./sockshop/docker/docker-compose.yml down
+docker compose -f ./sockshop/docker/docker-compose.yml down
 ```
 
 </details>
