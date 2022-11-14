@@ -55,7 +55,7 @@ docker compose -f labs/compose-model/rng/v2.yml up -d
 Print the environment variable details from the new web container to see that the env file contents have been expanded:
 
 ```
-docker container inspect --format='{{.Config.Env}}' rng_rng-web_1
+docker container inspect --format='{{.Config.Env}}' rng-rng-web_1
 ```
 
 Environment variables are a common way to set application config, but they're not as flexible as config files.
