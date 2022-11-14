@@ -55,7 +55,7 @@ docker compose -f labs/compose-model/rng/v2.yml up -d
 Print the environment variable details from the new web container to see that the env file contents have been expanded:
 
 ```
-docker container inspect --format='{{.Config.Env}}' rng-rng-web_1
+docker container inspect --format='{{.Config.Env}}' rng-rng-web-1
 ```
 
 Environment variables are a common way to set application config, but they're not as flexible as config files.
@@ -77,7 +77,7 @@ Compose lets you model volume mounts, so you can load local files into the conta
 # deploy v3
 docker compose -f labs/compose-model/rng/v3.yml up -d
 
-docker inspect rng_rng-web_1
+docker inspect rng-rng-web-1
 ```
 
 </details><br/>
@@ -184,7 +184,7 @@ But you can override the defaults with another file in your folder. Write new fi
 - users switch to the `labs/compose-model` directory
 - then run `docker compose up -d` to start the app in the dev configuration
 - the website is available at http://localhost:8390
-- container logs can be printed with `docker logs rng-lab_rng-api_1`
+- container logs can be printed with `docker logs rng-lab-rng-api-1`
 
 > Stuck? Try [hints](hints.md) or check the [solution](solution.md).
 
