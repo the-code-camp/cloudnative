@@ -169,12 +169,12 @@ Looks like the web app isn't connecting to the API. The web container is package
   <summary>Not sure how?</summary>
 
 ```
-docker logs rng_rng-web_1
+docker logs rng-rng-web-1
 
 # the web app is using the domain 'numbers-api'
 
 # run the nslookup command in the container:
-docker exec rng_rng-web_1 nslookup numbers-api
+docker exec rng-rng-web-1 nslookup numbers-api
 ```
 
 </details><br/>
