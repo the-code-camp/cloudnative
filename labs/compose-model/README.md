@@ -182,7 +182,7 @@ We can't do that with the latest random number model, because of the overrides a
 But you can override the defaults with another file in your folder. Write new files to support this workflow:
 
 - users switch to the `labs/compose-model` directory
-- they run `docker-compose up -d` to start the app in the dev configuration
+- then run `docker compose up -d` to start the app in the dev configuration
 - the website is available at http://localhost:8390
 - container logs can be printed with `docker logs rng-lab_rng-api_1`
 
