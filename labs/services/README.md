@@ -170,7 +170,7 @@ kubectl exec sleep -- curl -s http://whoami
 
 ## Understanding external Services
 
-There are two types of Service which can be accessed outside of the cluster: [LoadBalancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) and [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport).
+There are two types of Service which can be accessed outside of the cluster: [LoadBalancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) and [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport).
 
 They both listen for traffic coming into the cluster and route it to Pods, but they work in different ways. LoadBalancers are easier to work with, but not every Kubernetes cluster supports them.
 
