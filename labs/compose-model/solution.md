@@ -32,7 +32,7 @@ docker compose up -d
 Check API logs:
 
 ```
-docker logs rng-lab_rng-api_1
+docker logs rng-lab-rng-api-1
 ```
 
 > Shows the info and debug level logs
