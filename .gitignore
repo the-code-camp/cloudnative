@@ -2,3 +2,4 @@
 server-cert.pem
 server-key.pem
 labs/compose-model/.env
+.DS_Store
