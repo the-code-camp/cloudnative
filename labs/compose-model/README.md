@@ -141,15 +141,9 @@ Try the dev app at http://localhost:8190, you'll see random numbers in the range
 ```
 # the project name isn't enough for Compose to find the container:
 docker compose -p rng-dev logs rng-api
-
-# you need to include the project name and all the override
-# files in any Compose commands:
-docker compose -p rng-dev -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/dev.yml logs rng-api
 ```
 
 </details><br/>
-
-> One drawback of overrides and project names is that you need to supply them in the same order for every Compose command.
 
 You now have two versions of the app running. Containers use very little compute power unless they're under load, so Compose is great for running multiple non-production environments on a single machine.
 
@@ -165,7 +159,7 @@ docker compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-mo
 # try the app at http://localhost:8290
 
 # print the API logs:
-docker compose -p rng-test -f labs/compose-model/rng/core.yml -f labs/compose-model/rng/test.yml logs rng-api
+docker compose -p rng-test logs rng-api
 ```
 
 </details><br/>
