@@ -133,11 +133,10 @@ And the Kubernetes network:
 ```
 nslookup kubernetes
 
-# this will fail:
 ping kubernetes
 ```
 
-> The Kubernetes API server is available for Pod containers to use, but internal addresses don't support ping
+> The Kubernetes API server is available for Pod containers to use
 
 ## Connecting from one Pod to another
 
