@@ -101,7 +101,7 @@ Defaults are built into the `appsettings.json` file inside the Docker image - ru
 kubectl run configurable --image=thecodecamp/configurable:21.04 
 kubectl wait --for=condition=Ready pod configurable
 
-kubectl port-forward pod/configurable 8080:80
+kubectl port-forward pod/configurable 8080:8080
 ```
 
 > These are useful commands for quick testing or debugging, but in real life it's all YAML
