@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: sixeyed/configurable:21.04
+          image: thecodecamp/configurable:21.04
           env:
             - name: Configurable__Release
               value: 24.01.1
